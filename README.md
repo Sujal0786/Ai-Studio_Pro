@@ -118,21 +118,19 @@ Then open the provided **localhost URL** (usually `http://localhost:5173`) in yo
 
 - **Environment Variables:**  
   Create a `.env` file in the root:
-  ```bash
+
+  ```env
   VITE_FIREBASE_API_KEY=
-    ```bash
-VITE_FIREBASE_AUTH_DOMAIN=
-  ```bash
-VITE_FIREBASE_PROJECT_ID=
-  ```bash
-VITE_FIREBASE_STORAGE_BUCKET=
-  ```bash
-VITE_FIREBASE_MESSAGING_SENDER_ID=
-  ```bash
-VITE_FIREBASE_APP_ID=
-  ```bash
-VITE_FIREBASE_MEASUREMENT_ID=
-  ```bash
+  VITE_FIREBASE_AUTH_DOMAIN=
+  VITE_FIREBASE_PROJECT_ID=
+  VITE_FIREBASE_STORAGE_BUCKET=
+  VITE_FIREBASE_MESSAGING_SENDER_ID=
+  VITE_FIREBASE_APP_ID=
+  VITE_FIREBASE_MEASUREMENT_ID=
+
+  # App Configuration
+  VITE_APP_ID=default-ai-studio-pro-app
+
 
 # App Configuration
 VITE_APP_ID=default-ai-studio-pro-app
