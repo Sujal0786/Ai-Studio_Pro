@@ -40,11 +40,21 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// Log environment variables for debugging (remove in production)
-console.log('Firebase Config:', {
+// Log environment variables for debugging
+console.log('Firebase Config Loaded:', {
   hasApiKey: !!import.meta.env.VITE_FIREBASE_API_KEY,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  env: import.meta.env.MODE
 });
+
+// Initialize Firebase
+let firebaseApp;
+try {
+  firebaseApp = initializeApp(firebaseConfig);
+  console.log('Firebase initialized successfully');
+} catch (error) {
+  console.error('Firebase initialization error:', error);
+}
 
 const appId = import.meta.env.VITE_APP_ID || "default-ai-studio-pro-app";
 const initialAuthToken = import.meta.env.VITE_INITIAL_AUTH_TOKEN || null; 

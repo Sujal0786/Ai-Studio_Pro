@@ -9,19 +9,11 @@
       }
     }
   ],
-  "rewrites": [
-    { 
-      "source": "/assets/(.*)",
-      "destination": "/assets/$1"
-    },
-    { 
-      "source": "/(.*)", 
-      "destination": "/index.html" 
-    }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": ".*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$", "dest": "/$0" },
+    { "src": "/.*", "dest": "/index.html" }
   ],
-  "env": {
-    "NODE_ENV": "production"
-  },
   "build": {
     "env": {
       "NODE_ENV": "production"
