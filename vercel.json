@@ -9,14 +9,14 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
+  "rewrites": [
+    { 
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
     },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+    { 
+      "source": "/(.*)", 
+      "destination": "/index.html" 
     }
   ],
   "env": {
@@ -26,8 +26,5 @@
     "env": {
       "NODE_ENV": "production"
     }
-  },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  }
 }
