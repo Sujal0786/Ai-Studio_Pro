@@ -31,17 +31,23 @@ const useLocalStorage = (key, initialValue) => {
 
 // Firebase Configuration from Environment Variables
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-const appId = process.env.REACT_APP_APP_ID || "default-ai-studio-pro-app";
-const initialAuthToken = process.env.REACT_APP_INITIAL_AUTH_TOKEN || null; 
+// Log environment variables for debugging (remove in production)
+console.log('Firebase Config:', {
+  hasApiKey: !!import.meta.env.VITE_FIREBASE_API_KEY,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID
+});
+
+const appId = import.meta.env.VITE_APP_ID || "default-ai-studio-pro-app";
+const initialAuthToken = import.meta.env.VITE_INITIAL_AUTH_TOKEN || null; 
 
 // The core model for the subscription tiers
 const SUBSCRIPTION_PLANS = {
