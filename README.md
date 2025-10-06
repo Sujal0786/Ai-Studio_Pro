@@ -1,4 +1,6 @@
 # 🚀 AI Studio Pro: Setup & Execution Guide
+<a href="https://ai-studio-pro-topaz.vercel.app/"><strong>➥ Live Demo</strong></a>
+<br>
 
 Welcome to **AI Studio Pro** — an advanced AI workspace built with **React (Vite)**, **Firebase (Firestore/Auth)**, and **Gemini API** integration.  
 This guide will walk you through the complete process of setting up, configuring, and running your project locally.
@@ -167,3 +169,4 @@ Run your app, log in with Firebase Auth, and start generating with Gemini AI.
 **Author:** AI Studio Pro Team  
 **License:** MIT  
 **Last Updated:** October 2025
+
