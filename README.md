@@ -1,4 +1,6 @@
 # 🚀 AI Studio Pro: Setup & Execution Guide
+<a href="https://ai-studio-pro-topaz.vercel.app/"><strong>➥ Live Demo</strong></a>
+<br>
 
 Welcome to **AI Studio Pro** — an advanced AI workspace built with **React (Vite)**, **Firebase (Firestore/Auth)**, and **Gemini API** integration.  
 This guide will walk you through the complete process of setting up, configuring, and running your project locally.
@@ -118,9 +120,22 @@ Then open the provided **localhost URL** (usually `http://localhost:5173`) in yo
 
 - **Environment Variables:**  
   Create a `.env` file in the root:
-  ```bash
-  VITE_FIREBASE_API_KEY=your_key_here
-  VITE_GEMINI_KEY=your_gemini_key_here
+
+  ```env
+  VITE_FIREBASE_API_KEY=
+  VITE_FIREBASE_AUTH_DOMAIN=
+  VITE_FIREBASE_PROJECT_ID=
+  VITE_FIREBASE_STORAGE_BUCKET=
+  VITE_FIREBASE_MESSAGING_SENDER_ID=
+  VITE_FIREBASE_APP_ID=
+  VITE_FIREBASE_MEASUREMENT_ID=
+
+  # App Configuration
+  VITE_APP_ID=default-ai-studio-pro-app
+
+
+# App Configuration
+VITE_APP_ID=default-ai-studio-pro-app
   ```
   And reference them in your code as `import.meta.env.VITE_FIREBASE_API_KEY`.
 
@@ -154,3 +169,4 @@ Run your app, log in with Firebase Auth, and start generating with Gemini AI.
 **Author:** AI Studio Pro Team  
 **License:** MIT  
 **Last Updated:** October 2025
+
