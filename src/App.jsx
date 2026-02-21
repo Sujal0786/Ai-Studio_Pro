@@ -71,7 +71,8 @@ const SUBSCRIPTION_PLANS = {
 const callGeminiAPI = async (prompt, systemInstruction) => {
     // ***************************************************************
     // FIX: For local development, REPLACE THE PLACEHOLDER KEY BELOW.
-    const apiKey =import.meta.env.apiKey; // <-- PUT YOUR KEY HERE!
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+// <-- PUT YOUR KEY HERE!
     // ***************************************************************
     
     // CORRECTED URL CONSTRUCTION: The API Key is now correctly appended.
