@@ -84,10 +84,14 @@ const callGeminiAPI = async (prompt, systemInstruction) => {
         throw new Error("API Key is missing. Please check the src/App.jsx file and set your key.");
     }
 
-    const payload = {
-        contents: [{ parts: [{ text: prompt }] }],
-        systemInstruction: { parts: [{ text: systemInstruction }] },
-    };
+   const payload = {
+  contents: [
+    {
+      role: "user",
+      parts: [{ text: prompt }]
+    }
+  ]
+};
 
     try {
         const response = await fetch(apiUrl, {
